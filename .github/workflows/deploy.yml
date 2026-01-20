@@ -1,0 +1,27 @@
+name: Deploy Demo App to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            cd /home/deploy/demo-app
+            sudo rm -rf /var/www/html/*
+            sudo cp -r frontend/* /var/www/html/
+            sudo chown -R deploy:www-data /var/www/html
+            sudo systemctl reload nginx
