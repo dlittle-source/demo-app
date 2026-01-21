@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center; /* horizontal centering */
     padding-top: 60px;       /* moves container up from bottom, tweak as needed */
-    padding-bottom: 20px;    /* ensures some space at bottom */
+    padding-bottom: 80px;    /* ensures some space at bottom */
 }
 
 .container {
