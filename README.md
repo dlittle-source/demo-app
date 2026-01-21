@@ -34,26 +34,6 @@ The page includes:
 
 ## Folder Structure
 
-Local / GitHub
-demo-app/
-├── frontend/
-│   ├── index.html
-│   └── style.css
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-└── README.md
-
-EC2 Deployment Structure
-/home/deploy/demo-app/
-├── frontend/
-│   ├── index.html
-│   └── style.css
-└── .github/workflows/deploy.yml
-
-/var/www/html/
-├── index.html   # Served by Nginx
-└── style.css
 
 ### Repository (`demo-app`)
 
