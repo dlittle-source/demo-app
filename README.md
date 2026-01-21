@@ -49,7 +49,7 @@ The page includes:
 
 
 ### Repository (`demo-app`)
-
+"
 demo-app/
 ├── frontend/                   # Frontend source code
 │   ├── index.html              # Main demo page
@@ -58,5 +58,6 @@ demo-app/
 │   └── workflows/
 │       └── deploy.yml          # GitHub Actions CI/CD workflow
 └── README.md                   # Documentation & client instructions
+"
 
 
