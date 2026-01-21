@@ -3,16 +3,18 @@ name: Deploy Demo App to EC2
 on:
   push:
     branches:
-      - main
+      - main  # Trigger deploy on pushes to main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # Step 1: Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Step 2: Deploy to EC2 via SSH
       - name: Deploy to EC2
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -21,7 +23,17 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             cd /home/deploy/demo-app
+            # Ensure the latest commit is pulled
+            git reset --hard
+            git pull origin main
+            # Clear old deployed files
             sudo rm -rf /var/www/html/*
+            # Copy updated frontend files to Nginx root
             sudo cp -r frontend/* /var/www/html/
+            # Fix permissions
             sudo chown -R deploy:www-data /var/www/html
+            # Reload Nginx to apply changes
             sudo systemctl reload nginx
+
+
+
