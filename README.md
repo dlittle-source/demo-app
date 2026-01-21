@@ -61,6 +61,20 @@ demo-app/
 └── README.md # Documentation & client instructions
 ```
 
+**EC2 Instance Structure**
+```
+/home/deploy/
+└── demo-app/
+    ├── frontend/               # Source files pulled from GitHub
+    │   ├── index.html
+    │   └── style.css
+    └── README.md
+
+/var/www/html/
+├── index.html                  # Live site served by Nginx
+└── style.css
+```
+
 **Notes:**
 
 - `frontend/` contains all files **served by Nginx** on EC2.
