@@ -50,14 +50,24 @@ The page includes:
 
 ### Repository (`demo-app`)
 
-"demo-app/
-├── frontend/                   # Frontend source code
-│   ├── index.html              # Main demo page
-│   └── style.css               # Styling for the demo page
+```
+demo-app/
+├── frontend/ # Frontend source code
+│ ├── index.html # Main demo page
+│ └── style.css # Styling for the demo page
 ├── .github/
-│   └── workflows/
-│       └── deploy.yml          # GitHub Actions CI/CD workflow
-└── README.md"                  # Documentation & client instructions
+│ └── workflows/
+│ └── deploy.yml # GitHub Actions CI/CD workflow
+└── README.md # Documentation & client instructions
+```
+
+**Notes:**
+
+- `frontend/` contains all files **served by Nginx** on EC2.
+- `.github/workflows/deploy.yml` handles **automatic deployment** whenever `main` is updated.
+- `README.md` explains the project, workflow, and features for clients or collaborators.
+- Deployed files on EC2 live at: `/var/www/html/`.
+- Source repo mirrors the deployment folder, ensuring a **clean and reproducible workflow**.
 
 
 
