@@ -1,5 +1,5 @@
 ## CI/CD Flow Diagram
-![CI/CD Diagram](docsci-cd-diagram.png)
+![CI/CD Diagram](ci-cd-diagram.png)
 
 
 # AWS Deployment Demo App
