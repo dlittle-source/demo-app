@@ -34,9 +34,14 @@ Visit the live demo:
 
 The page includes:
 
-- Confirmation of CI/CD deployment
-- Live updates whenever a push is made to `main`
-- Basic styling to highlight deployment content
+-  Confirmation of CI/CD deployment (live status update)
+-  Live updates whenever a push is made to main
+-  Responsive and mobile-friendly layout
+-  Polished styling with modern container design
+-  Clear structure to showcase production deployment
+-  Demonstrates secure and automated deployment workflow
+-  Quick visual confirmation for clients that infrastructure, Nginx, and CI/CD are all working together
+
 
 ---
 
