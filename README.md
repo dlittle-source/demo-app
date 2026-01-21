@@ -14,12 +14,16 @@ It demonstrates my ability to take an application from “it works locally” to
 
 ## Features
 
-- Fully deployed **frontend app** hosted on Nginx
-- Automated **CI/CD pipeline** using GitHub Actions
-- **Passwordless sudo deploy user** for secure deployments
-- Proper **permissions** setup for web root
-- Automatic **Nginx reload** on updates
-- Clean, professional, and **client-ready demo page**
+-  Fully deployed frontend app hosted on Nginx
+-  Automated CI/CD pipeline using GitHub Actions
+-  Passwordless sudo deploy user for secure deployments
+-  Proper permissions setup for /var/www/html
+-  Automatic Nginx reload on updates
+-  Latest commit always deployed via git pull in workflow
+-  Responsive and polished demo page for clients
+-  Mobile-friendly design with clean, professional layout
+-  Portfolio-ready documentation including README + workflow diagram
+-  Hands-on DevOps skills demonstrated: AWS EC2, Nginx, Git, CI/CD
 
 ---
 
