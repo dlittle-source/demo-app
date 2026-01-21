@@ -5,37 +5,38 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
     min-height: 100vh;
     display: flex;
     justify-content: center; /* horizontal centering */
-    padding-top: 60px;       /* moves container up from bottom, tweak as needed */
-    padding-bottom: 250px;    /* ensures some space at bottom */
+    padding-top: 50px;       /* moves container up */
+    padding-bottom: 30px;    /* space at bottom */
 }
 
 .container {
     background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
+    padding: 40px 30px;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     width: 90%;
-    margin-bottom: 20px; /* extra spacing if needed */
+    margin-bottom: 20px;
 }
 
 h1 {
     margin-bottom: 20px;
-    color: #222;
+    color: #1f2937; /* darker heading for emphasis */
     font-size: 28px;
+    font-weight: 600;
 }
 
 p {
     font-size: 16px;
-    color: #555;
-    margin-top: 8px;
-    line-height: 1.5;
+    color: #4b5563; /* soft gray text */
+    margin-top: 12px;
+    line-height: 1.6;
 }
 
 
