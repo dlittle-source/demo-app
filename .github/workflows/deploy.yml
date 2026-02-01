@@ -26,7 +26,12 @@ jobs:
 
           echo "Creating backup of current live site..."
           sudo mkdir -p /var/www/backups
-          sudo tar -czf /var/www/backups/html_backup_latest.tar.gz /var/www/html || true
+          sudo tar -czf /var/www/backups/html_backup_$(date +%F_%H-%M).tar.gz -C /var/www html || true
+
+          # Update latest backup symlink
+          sudo ln -sfn \
+          /var/www/backups/html_backup_$(date +%F_%H-%M).tar.gz \
+          /var/www/backups/html_backup_latest.tar.gz
 
           echo "Pulling latest code..."
           git reset --hard
