@@ -60,12 +60,12 @@ This ensures that you can safely roll back to the last working version if needed
   /var/www/backups/html_backup_latest.tar.gz
 
 ### Restore Previous Version
-
 If a deployment introduces an issue, you can restore the last working version quickly:
 
-bash
+```bash
 sudo tar -xzf /var/www/backups/html_backup_latest.tar.gz -C /var/www
 sudo systemctl reload nginx
+
 
 ## Folder Structure
 
