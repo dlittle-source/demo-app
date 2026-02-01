@@ -46,7 +46,7 @@ The page includes:
 
 ---
 
-## Backup & Rollback Support
+### Backup & Rollback Support
 
 Before each deployment, the currently live site is automatically backed up.  
 This ensures that you can safely roll back to the last working version if needed.
@@ -54,8 +54,10 @@ This ensures that you can safely roll back to the last working version if needed
 ### Automatic Backup
 - The live site (`/var/www/html`) is backed up before each deployment.
 - Backups are stored on the EC2 instance with a **timestamp**:
-  /var/www/backups/html_backup_YYYY-MM-DD_HH-MM.tar.gz  
 
+  ```/var/www/backups/html_backup_YYYY-MM-DD_HH-MM.tar.gz
+  ```  
+ 
 ### Restore Previous Version
 If a deployment introduces an issue, you can restore the last working version quickly:
 
