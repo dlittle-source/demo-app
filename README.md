@@ -64,6 +64,7 @@ If a deployment introduces an issue, you can restore the last working version qu
 ```bash
 sudo tar -xzf /var/www/backups/html_backup_latest.tar.gz -C /var/www
 sudo systemctl reload nginx
+```
 
 
 ## Folder Structure
