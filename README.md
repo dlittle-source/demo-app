@@ -55,8 +55,9 @@ This ensures that you can safely roll back to the last working version if needed
 - The live site (`/var/www/html`) is backed up before each deployment.
 - Backups are stored on the EC2 instance with a **timestamp**:
 
-  ```/var/www/backups/html_backup_YYYY-MM-DD_HH-MM.tar.gz
-  ```  
+```
+  /var/www/backups/html_backup_YYYY-MM-DD_HH-MM.tar.gz
+```  
  
 ### Restore Previous Version
 If a deployment introduces an issue, you can restore the last working version quickly:
