@@ -46,6 +46,27 @@ The page includes:
 
 ---
 
+## Backup & Rollback Support
+
+Before each deployment, the currently live site is automatically backed up.  
+This ensures that you can safely roll back to the last working version if needed.
+
+### Automatic Backup
+- The live site (`/var/www/html`) is backed up before each deployment.
+- Backups are stored on the EC2 instance with a **timestamp**:
+  /var/www/backups/html_backup_YYYY-MM-DD_HH-MM.tar.gz
+
+- The **latest backup** is also symlinked as:
+  /var/www/backups/html_backup_latest.tar.gz
+
+### Restore Previous Version
+
+If a deployment introduces an issue, you can restore the last working version quickly:
+
+```bash
+sudo tar -xzf /var/www/backups/html_backup_latest.tar.gz -C /var/www
+sudo systemctl reload nginx
+
 ## Folder Structure
 
 ### Repository (`demo-app`)
