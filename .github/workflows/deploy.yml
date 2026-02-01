@@ -1,6 +1,6 @@
 name: Deploy Demo App to EC2
 
-# on:
+on:
   push:
     branches:
       - main  # Trigger deploy on pushes to main
