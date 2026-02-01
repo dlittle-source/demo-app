@@ -1,3 +1,7 @@
+## CI/CD Flow Diagram
+![CI/CD Diagram](ci-cd-diagram.png)
+
+
 # AWS Deployment Demo App
 
 ## Overview
@@ -10,12 +14,16 @@ It demonstrates my ability to take an application from “it works locally” to
 
 ## Features
 
-- Fully deployed **frontend app** hosted on Nginx
-- Automated **CI/CD pipeline** using GitHub Actions
-- **Passwordless sudo deploy user** for secure deployments
-- Proper **permissions** setup for web root
-- Automatic **Nginx reload** on updates
-- Clean, professional, and **client-ready demo page**
+-  Fully deployed frontend app hosted on Nginx
+-  Automated CI/CD pipeline using GitHub Actions
+-  Passwordless sudo deploy user for secure deployments
+-  Proper permissions setup for /var/www/html
+-  Automatic Nginx reload on updates
+-  Latest commit always deployed via git pull in workflow
+-  Responsive and polished demo page for clients
+-  Mobile-friendly design with clean, professional layout
+-  Portfolio-ready documentation including README + workflow diagram
+-  Hands-on DevOps skills demonstrated: AWS EC2, Nginx, Git, CI/CD
 
 ---
 
@@ -26,13 +34,51 @@ Visit the live demo:
 
 The page includes:
 
-- Confirmation of CI/CD deployment
-- Live updates whenever a push is made to `main`
-- Basic styling to highlight deployment content
+-  Confirmation of CI/CD deployment (live status update)
+-  Live updates whenever a push is made to main
+-  Responsive and mobile-friendly layout
+-  Polished styling with modern container design
+-  Clear structure to showcase production deployment
+-  Demonstrates secure and automated deployment workflow
+-  Quick visual confirmation for clients that infrastructure, Nginx, and CI/CD are all working together
+
 
 ---
 
 ## Folder Structure
 
 ### Repository (`demo-app`)
+
+```text
+demo-app/
+├── frontend/                   # Frontend source code
+│   ├── index.html              # Main demo page
+│   └── style.css               # Styling for the demo page
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Actions CI/CD workflow
+└── README.md                   # Documentation & client instructions
+
+
+/home/deploy/
+└── demo-app/
+    ├── frontend/               # Source files pulled from GitHub
+    │   ├── index.html
+    │   └── style.css
+    └── README.md
+
+/var/www/html/
+├── index.html                  # Live site served by Nginx
+└── style.css
+
+
+**Notes:**
+
+- frontend/ contains all files **served by Nginx** on EC2.
+- .github/workflows/deploy.yml` handles **automatic deployment** whenever main is updated.
+- README.md explains the project, workflow, and features for clients or collaborators.
+- Deployed files on EC2 live at: /var/www/html/.
+- Source repo mirrors the deployment folder, ensuring a **clean and reproducible workflow**.
+
+
 
