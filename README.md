@@ -1,8 +1,9 @@
+# AWS Deployment Demo App
+
 ## CI/CD Flow Diagram
 ![CI/CD Diagram](ci-cd-diagram.png)
 
-
-# AWS Deployment Demo App
+---
 
 ## Overview
 
@@ -16,11 +17,11 @@ It demonstrates my ability to take an application from “it works locally” to
 
 - Fully deployed frontend application hosted on Nginx (AWS EC2)
 - Automated CI/CD pipeline using GitHub Actions
-- Secure passwordless sudo deploy user for safe, automated deployments
-- Proper permissions configured for /var/www/html
+- Secure passwordless sudo `deploy` user for safe, automated deployments
+- Proper permissions configured for `/var/www/html`
 - Pre-deployment backups with rollback support to ensure safe updates
 - Automatic Nginx reload on successful deployments
-- Latest commit always deployed via git pull in the CI/CD workflow
+- Latest commit always deployed via `git pull` in the CI/CD workflow
 - Responsive and polished demo page for client presentation
 - Mobile-friendly design with a clean, professional layout
 - Portfolio-ready documentation including README + workflow diagram
@@ -35,14 +36,13 @@ Visit the live demo:
 
 The page includes:
 
--  Confirmation of CI/CD deployment (live status update)
--  Live updates whenever a push is made to main
--  Responsive and mobile-friendly layout
--  Polished styling with modern container design
--  Clear structure to showcase production deployment
--  Demonstrates secure and automated deployment workflow
--  Quick visual confirmation for clients that infrastructure, Nginx, and CI/CD are all working together
-
+- Confirmation of CI/CD deployment (live status update)
+- Live updates whenever a push is made to `main`
+- Responsive and mobile-friendly layout
+- Polished styling with modern container design
+- Clear structure to showcase production deployment
+- Demonstrates secure and automated deployment workflow
+- Quick visual confirmation for clients that infrastructure, Nginx, and CI/CD are all working together
 
 ---
 
@@ -54,10 +54,7 @@ This ensures that you can safely roll back to the last working version if needed
 ### Automatic Backup
 - The live site (`/var/www/html`) is backed up before each deployment.
 - Backups are stored on the EC2 instance with a **timestamp**:
-  /var/www/backups/html_backup_YYYY-MM-DD_HH-MM.tar.gz
-
-- The **latest backup** is also symlinked as:
-  /var/www/backups/html_backup_latest.tar.gz
+  /var/www/backups/html_backup_YYYY-MM-DD_HH-MM.tar.gz  
 
 ### Restore Previous Version
 If a deployment introduces an issue, you can restore the last working version quickly:
